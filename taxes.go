@@ -15,7 +15,7 @@ var taxTable = map[string]decimal.Decimal{
 
 func TaxForZip(zip string) (decimal.Decimal, error) {
 	tax, ok := taxTable[zip]
-	if ok {
+	if !ok {
 		return decimal.Decimal{}, fmt.Errorf("unknown zip: %s", zip)
 	}
 	return tax, nil
