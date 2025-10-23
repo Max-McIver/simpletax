@@ -2,6 +2,7 @@ package simpletax
 
 import (
 	"fmt"
+
 	"github.com/shopspring/decimal"
 )
 
